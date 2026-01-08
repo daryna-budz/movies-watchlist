@@ -11,7 +11,7 @@
     <div class="container">
         <div class="header">
             <h1>Find your movie 🎬</h1>
-            <p id="my-watchlist">My Watchlist</p>
+            <a id="my-watchlist" href="watchlist.html">My Watchlist</a>
         </div>
         <div id="movie-search">
             <div class="search-field">
@@ -22,12 +22,14 @@
             <button id="search-btn">Search</button>
           </div>
           
-        <div id="movie-list">
-            <i class="fa-solid fa-film"></i>
-            <p>Start exploring</p>
+        <div class="movie-list movies">
+            <div id="start-text">
+                <i class="fa-solid fa-film"></i>
+                <p id="start-exploring">Start exploring</p>
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

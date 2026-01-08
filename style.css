@@ -12,7 +12,7 @@
 
 body{
     background-color: #1C1C1C;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,10 @@ body{
 .container{
     background-color: white;
     width: 45vw;
-    height: 90vh;
+    min-height: 90vh;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -43,9 +45,11 @@ h1{
     font-size: 35px;
 }
 
-#my-watchlist{
+#my-watchlist, #search-movies{
     cursor: pointer;
     font-weight: 500;
+    text-decoration: none;
+    color: white;
 }
 
 #movie-search{
@@ -106,8 +110,8 @@ h1{
     font-size: 14px;
 }
 
-#movie-list{
-    height: 50%;
+.movie-list{
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,13 +120,125 @@ h1{
     text-align: center;
 }
 
-#movie-list i{
+
+#start-text i{
     font-size: 70px;
     color: #DFDDDD;
 }
 
-#movie-list p{
+#start-text p{
     font-size: 17px;
     font-weight: 600;
     color: #DFDDDD;
+}
+
+.movie{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    gap: 50px;
+    border-bottom: #dfe0e2 1px solid;
+}
+
+.movie img{
+    width: 150px;
+    height: 200px;
+}
+
+.movie-info{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+}
+
+.movie-info p{
+    color: black;
+}
+
+.movies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 35px;
+    margin-top: 20px;
+}
+
+.movie-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.movie-title{
+    font-weight: 600;
+    font-size: 20px;
+    color: #111827;
+}
+
+.movie-rate{
+    font-weight: 400;
+    font-size: 13px;
+    color: #111827;
+}
+
+.movie-descr p{
+    font-weight: 400;
+    color: #6B7280;
+    font-size: 14px;
+}
+
+.read-more{
+    color:#111827;
+    cursor: pointer;
+}
+
+.add-to-list, .remove-from-list{
+    padding: 10px 8px;
+    background-color: #000000;
+    border: 2px solid black;
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.add-to-list:hover, .remove-from-list:hover{
+    color: #000000;
+    background-color: white;
+}
+
+/* MY WATCHLIST */
+
+#add-movies{
+    display: inline-flex;
+    align-items: center;
+    gap:10px;
+    margin-top: 15px;
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#add-movies span{
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;        
+    border: 2px solid black;
+
+    color: white;
+    background: black;          
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 1;
 }
